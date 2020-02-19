@@ -64,7 +64,7 @@ body > * {
 }
 
 main, header, nav, article, aside, footer, section {
-  background-color: rgba(0,255,0,0.5);
+  background-color :rgb(109, 219, 109);
   padding: 1%;
 }
 
@@ -153,7 +153,4 @@ ul li{
   display: inline;
   padding: 90px;  
 }
-.container{
-  display: flex;
-  justify-content: space-between;
-}
+
