@@ -47,11 +47,11 @@ html, body {
   flex-flow: row wrap;
 }
  body > * {
-  Background-color: rgb(127, 214, 127);
+  Background-color: rgb(0,255,0,0.5);
   padding: 1%;
 }
  main, header, nav, article, aside, footer, section {
-  background-color: rgb(127, 214, 127);
+  background-color: rgb(0,255,0,0.5);
   padding: 1%;
 }
  h1 {
