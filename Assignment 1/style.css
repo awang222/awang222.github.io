@@ -1,7 +1,48 @@
-.header {
+h1 {
+    font-family: "Mountains of Christmas";
+    font-size: 6rem;
+    text-align: left;
+}
+ h2{
+     font-family: "Verdana, Geneva, Tahoma, sans-serif";
+     font-size: 2rem;
+     font-weight: 900;
+    }
 
+.header {
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .header img {
-    
+    display: block;
+    height: 60px;
+    padding-top: 20.15px;
+      }
+      
+.jobtitle {
+    font-family: "Verdana, Geneva, Tahoma, sans-serif";
+    font-weight: 700;
+    font-style: italic;
+    font-size: 1.5rem;
+    margin-bottom: 2px;
+    letter-spacing: 0.02rem;
+}
+
+.jobdesc {
+    font-family: "Verdana, Geneva, Tahoma, sans-serif";
+    font-weight: 100;
+    font-style: normal;
+}
+div {
+    display: block;
+}
+
+li {
+    text-align: -webkit-match-parent;
+}
+
+ol {
+    list-style-type: decimal;
 }
