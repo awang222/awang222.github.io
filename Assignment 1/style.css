@@ -11,16 +11,18 @@ h1 {
 
 .header {
     margin-bottom: 10px;
-    display: flex;
-    flex-flow: row wrap;
+    background-color:#70AFFF;
+    padding: 1%;
 }
 
-.header img {
-    display: block;
-    height: 60px;
-    padding-top: 20.15px;
-      }
-      
+.container {
+    background-color: #FFD68A;
+}
+
+.one img {
+   
+}
+
 .jobtitle {
     font-family: "Verdana, Geneva, Tahoma, sans-serif";
     font-weight: 700;
