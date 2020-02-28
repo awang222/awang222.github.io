@@ -44,12 +44,10 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 0px;
-    margin: 15px;
 }
 
 .one {
     flex: 0 1 auto;
-    padding: 15px;
     width: 175px;
     margin-right: 15px;
     flex-direction: row;
