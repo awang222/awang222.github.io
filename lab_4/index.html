@@ -1,20 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lab 4</title>
-    <link src="./style.css" type="text/stylesheet" />
+  <div class="header"><title>Alicia Wang's Lab 4</title></div>
+  <link rel="stylesheet" type="text/css" href="./style.css" />
 </head>
 <body>
-    <div>
-        <h1 class="header">Lab 4 Header</h1>
+    <div class="container">
+        <div class="wrapper">
+            <div class="header">Alicia Wang's Lab 4</div>
+            <button class="button" onclick="clickMe()"">
+            Click me to make a change
+            </button>
+            <div class="content">
+          <p>
+            Retro fam narwhal hoodie meggings viral bushwick yr chartreuse.
+            Chartreuse seitan banh mi selfies, woke ennui venmo craft beer. Air
+            plant tumeric retro DIY iPhone poutine. +1 gastropub chillwave,
+            cronut glossier pork belly tacos poke next level fanny pack vegan
+            jianbing lo-fi.
+          </p>
+        </div>
+        <div class="footer"></div>
     </div>
-    <div class="content">
-        hello world
-    </div>
+     
     <script>
+
+        function clickMe() {
+          let name = "Alicia Wang";
+        let a = name.length;
+        let b = name.charAt(2);
+        let c = name.slice(a-3, a);
+        let d = name.substring(0, 5);
+        let e = name.substring(6, 9);
+        let ff = d.length + e.length;
+
+        const header = document.querySelector(".header");
+        header.innerHTML = name + "'s Lab 4" + ff;
+
+        const content = document.querySelector(".content");
+        content.innerHTML =
+          "Hello World" + "<br />" + "My name has " + a + " characters." + "<br />" + "<br />";
+
+        const paragraph = document.querySelector(".paragraph");
+        paragraph.innerHTML =
+          "The third character of my name is " +
+          b.toUpperCase() + ". The last three characters of my last name are " +
+          c.toLowerCase();
+      }
+    
     </script>
 </body>
 </html>
