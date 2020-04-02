@@ -31,13 +31,6 @@ ul {
     border-radius: 14px;
   }
 
-.content {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-}
 body {
     line-height: 1.6;
     font-size: 18px;
