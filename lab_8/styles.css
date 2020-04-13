@@ -27,6 +27,7 @@ h3 {
   display: flex;
   align-items: flex-start;
   font-family: Helvetica, Geneva, Tahoma, sans-serif;
+  height: 80%
 }
 
 .wrapper {
@@ -70,6 +71,7 @@ h3 {
   border: 2px dotted #444;
   align-self: flex-start;
   width: 85%;
+
   padding: 10px;
   overflow-wrap: break-word;
   margin: 25px 50px;
