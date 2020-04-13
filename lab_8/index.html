@@ -55,10 +55,8 @@
     })
     
     .then((reformattedData) => {
-        const chartContainer = document.getElementsByClassName("content")[0];
-        chartContainer.innerHTML = " ";
-
-        const chart = new CanvasJS.Chart(chartContainer, {
+     
+        var chart = new CanvasJS.Chart(chartContainer, {
           theme: "light2",
           exportEnabled: true,  
           animationEnabled: true,
@@ -66,11 +64,13 @@
             width: 780,
             
             title: {
-              text: "PG County Dataset",
+              text: "Prince George's County Dataset",
             },
             data: [
               {
                 type: "pie",
+                startAngle: 25,
+		            indexLabelFontSize: 16,
                 dataPoints: reformattedData,
               },
             ],
