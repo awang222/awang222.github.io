@@ -22,7 +22,7 @@ app.use(express.static('public'));
 
 
 function processDataForFrontEnd(req, res) {
-  const baseURL = ''; // Enter the URL for the data you would like to retrieve here
+  const baseURL = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json'; // Enter the URL for the data you would like to retrieve here
 
   // Your Fetch API call starts here
   // Note that at no point do you "return" anything from this function -
@@ -31,12 +31,39 @@ function processDataForFrontEnd(req, res) {
       .then((r) => r.json())
       .then((data) => {
         console.log(data);
-        res.send({ data: data }); // here's where we return data to the front end
+      const intData = data.filter((s) => s.geocoded_column_1);
+      const sorted = intData.map((m) => ({
+      category: m.category,
+    }));
+     console.log(sorted);
+     return sorted;
       })
-      .catch((err) => {
-        console.log(err);
-        res.redirect('/error');
-      });
+    
+    .then((data) => {
+      return data.reduce((result, current) => {
+        if (!result[current.category]) {
+          result[current.category] = [];
+        } else {
+          result[current.category].push(current);
+        }
+        return result;
+      }, {});
+    })
+    .then ((data) => {
+      const reformattedData = Object.entries(data).map((m, a) => {
+      return {
+          y: m[1].length,
+          label: m[0],
+      };
+  });
+      return reformattedData;
+})
+  res.send({ data: data })
+
+.catch((err) => {
+  console.log(err);
+  res.redirect('/error');
+});
 }
 
 // This is our first route on our server.
